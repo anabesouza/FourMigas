@@ -1,0 +1,12 @@
+Cadastro de pessoa:
+
+1- Compara senha com repetir_senha
+2- Apenas um cadastro por email
+3- Fazer Login
+4- Atualizar e excluir conta
+
+HTML:
+1- Buscar
+2- Responsividade
+3- Rodapé
+4- Foto que surge (produto)

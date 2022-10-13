@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+	<html lang = "pt-br">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Minha Conta</title>
+			<link rel="stylesheet" type="text/css" href="estilo.css">
+			<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+		</head>
+        <body>
+
+			<!-- imagem com nome, insta, minha conta -->
+			<div id="inicio">
+				<img src="inicio.png" alt="logoInsta" usemap="#insta">
+				<map name="insta">
+  					<area shape="rect" coords="34,44,270,350" alt="instagram" href="https://www.instagram.com/fourmigasloja/?hl=pt-br" target="_blank">
+				</map>
+			</div>
+
+			<!-- menu -->
+			<div id="fundoMenu">
+			<br>
+			<nav>
+			  <div class="dropdown">
+			    <button class="dropbtn"><a href="home.html">HOME</a></button>
+			  </div>
+
+			  <div class="dropdown">
+				<button class="dropbtn" data-bs-toggle="modal" data-bs-target="#minhaJanelaModal">CADASTRO</button>
+			</div>
+
+
+			  <div class="dropdown">
+			    <button class="dropbtn">MIÇANGAS</button>
+			    <div class="dropdown-content">
+			      <a href="micangas(colares).html">COLARES</a>
+			      <a href="micangas(pulseiras).html">PULSEIRA</a>
+			    </div>
+			  </div>
+
+			  <div class="dropdown">
+			    <button class="dropbtn">BORDADOS</button>
+			    <div class="dropdown-content">
+			      <a href="bordados(pequenos).html">PEQUENOS</a>
+			      <a href="bordados(grandes).html">GRANDES</a>
+			    </div>
+			  </div>
+
+			  <div class="dropdown">
+			    <button class="dropbtn">ILUSTRAÇÕES</button>
+			    <div class="dropdown-content">
+			      <a href="ilustracoes(pequenas).html">PEQUENAS</a>
+			      <a href="ilustracoes(grandes).html">GRANDES</a>
+			    </div>
+			  </div>
+			<br>
+			<br>
+			</div>
+			</nav>
+			<h1>MINHA CONTA</h1>
+            <p>não possue uma conta? Cadastre-se <a href="cadastro.html">AQUI</a></p>
+			
+			<br>
+			<br>
+			<!-- rodapé -->
+			<div id="fundoRodape">
+				<p>lalalalalalal</p>
+				<p>lelelelelelelel</p>
+				<p>lolololololoo</p>
+				<p>lilililkili</p>
+			
+			</div>
+			
+					<!-- Modal -->
+			<div class="modal fade" id="minhaJanelaModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5 class="modal-title" id="exampleModalLabel">Faça seu cadastro:</h5>
+							<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+						</div>
+						<div class="modal-body">
+							<br>		
+								<div class="container">
+		
+									<div class="container">
+
+										<form onsubmit="return false">
+											<!--onsubmit= return false;-->
+								
+											<div class="mb-3">
+												<label for="campoNome" class="form-label">Nome Completo:</label>
+												<input type="text" class="form-control" id="campoNome" aria-describedby="ajudaNome"
+													value="Fulana de Souza" required="required">
+												<div id="ajudaNome" class="form-text">Informe o seu nome completo.</div>
+											</div>
+											<div class="mb-3">
+												<label for="campoEmail" class="form-label">Email:</label>
+												<input type="email" class="form-control" id="campoEmail" aria-describedby="ajudaEmail"
+													value="fsouza@gmail.com" required="required">
+												<div id="ajudaEmail" class="form-text">Informe o seu email.</div>
+											</div>
+											<div class="mb-3">
+												<label for="campoSenha" class="form-label">Senha:</label>
+												<input type="password" class="form-control" id="campoSenha" aria-describedby="ajudaSenha" value=""
+													pattern="(?=.*[a-z])(?=.*[A-Z]).{8,}" required="required">
+												<div id="ajudaSenha" class="form-text">Crie uma senha. (Mínimo 8 caracteres, uma letra minúscula e uma
+													letra maiúscula.)</div>
+												<div id="message">
+													<h3>Senha deve conter:</h3>
+													<p id="letter" class="invalid">Uma letra <b>minúscula</b>.</p>
+													<p id="capital" class="invalid">Uma letra <b>maiúscula</b>.</p>
+													<p id="length" class="invalid">Mínimo <b>8 caracteres</b>.</p>
+												</div>
+											</div>
+								
+											<!-- Min 8 caracteres, comparar com repetir e ficar em formato senha. -->
+											<div class="mb-3">
+												<label for="campoRepetir_senha" class="form-label">Confirme sua senha:</label>
+												<input type="password" class="form-control" id="campoRepetir_senha"
+													aria-describedby="ajudaRepetir_senha" value="" required="required"
+													onblur="validarSenha('campoSenha','campoRepetir_senha')">
+												<div id="ajudaRepetir_senha" class="form-text">Repita sua senha.</div>
+											</div>
+											<div class="mb-3">
+												<label for="campoTelefone" class="form-label">Telefone:</label>
+												<input type="number" class="form-control" id="campoTelefone" aria-describedby="ajudaTelefone"
+													value="47 9 9123-4567" pattern="(?=.{11})" required="required">
+												<div id="ajudaTelefone" class="form-number">Informe o seu telefone.</div>
+											</div>
+											<div class="mb-3">
+												<label for="campoEstado" class="form-label">Estado:</label>
+												<input type="text" class="form-control" id="campoEstado" aria-describedby="ajudaEstado"
+													value="São Paulo" required="required">
+												<div id="ajudaEstado" class="form-text">Informe o estado onde mora.</div>
+											</div>
+											<div class="mb-3">
+												<label for="campoCidade" class="form-label">Cidade:</label>
+												<input type="text" class="form-control" id="campoCidade" aria-describedby="ajudaCidade"
+													value="São Paulo" required="required">
+												<div id="ajudaCidade" class="form-text">Informe a sua cidade.</div>
+											</div>
+											<div class="mb-3">
+												<label for="campoCep" class="form-label">CEP:</label>
+												<input type="text" class="form-control" id="campoCep" aria-describedby="ajudaCep" value="12345-600"
+													required="required">
+												<div id="ajudaCep" class="form-text">Informe o seu CEP.</div>
+												<a href="https://buscacepinter.correios.com.br/app/endereco/index.php" target="_blank">Não sabe seu CEP?
+													Consulte aqui.</a>
+											</div>
+											<div class="mb-3">
+												<label for="campoRua" class="form-label">Endereço:</label>
+												<input type="text" class="form-control" id="campoRua" aria-describedby="ajudaRua" value="Rua"
+													required="required">
+												<div id="ajudaRua" class="form-text">Informe o seu endereço.</div>
+											</div>
+											<div class="mb-3">
+												<label for="campoNumero" class="form-label">Número:</label>
+												<input type="text" class="form-control" id="campoNumero" aria-describedby="ajudaNumero" value="Nº 1234"
+													required="required">
+												<div id="ajudaNumero" class="form-text">Informe o número de sua casa.</div>
+											</div>
+											<div class="mb-3">
+												<label for="campoComplemento" class="form-label">Complemento:</label>
+												<input type="text" class="form-control" id="campoComplemento" aria-describedby="ajudaComplemento"
+													value="Bloco 1, Apto 200">
+												<div id="ajudaComplemento" class="form-text">Informe o complemento (caso tenha).</div>
+											</div>
+											<button type="submit" class="btn btn-primary" id="btIncluirPessoa"
+												style="background-color: black; border-color: #C9AAE2;">Cadastrar</button>
+										</form>
+								
+									</div>
+												<!-- Optional JavaScript; choose one of the two! -->
+						
+												<!-- Option 1: Bootstrap Bundle with Popper -->
+												<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+													integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+													crossorigin="anonymous"></script>
+						
+												<!-- Option 2: Separate Popper and Bootstrap JS -->
+												<!--
+											<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+											<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+											-->
+						
+												<!-- https://releases.jquery.com/ -->
+						
+												<script src="https://code.jquery.com/jquery-3.6.0.js"
+													integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+													crossorigin="anonymous"></script>
+						
+												<script src="script.js"></script>
+												<br>
+										</body>
+		
+  </body>
+</html>
