@@ -38,18 +38,6 @@ class Pessoa(db.Model):
             "complemento": self.complemento
         }
 
-        #curl -X
-        #POST -d 
-        #'{"Nome":"Ana", "Email":"fsouza@gmail.com"}' -H 
-        #"Content-Type:application/json" 
-        #localhost:5000/Pessoa
-#{
-#"detalhes": "ok", 
-  #"resultado": "ok"
-#}
-
-
-
 # teste    
 if __name__ == "__main__":
     # apagar o arquivo, se houver

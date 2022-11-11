@@ -1,6 +1,7 @@
-from geral.config import *
-from modelo.Pessoa import *
+from config import *
+from modelo import *
 
+# curl localhost:5000/listar/Pessoa
 @app.route("/listar/<string:classe>")
 def listar(classe):
     # obter os dados da classe informada
@@ -14,28 +15,34 @@ def listar(classe):
     # PERMITIR resposta para outras pedidos oriundos de outras tecnologias
     resposta.headers.add("Access-Control-Allow-Origin", "*")
     return resposta
-    '''
-    exemplo de teste:
-    $ curl localhost:5000/listar/ExameRealizado
-    [
-      {
-        "data": "02/02/2020", 
-        "exame": {
-          "id": 1, 
-          "nome": "B12", 
-          "unidade": "pg/mL", 
-          "vr": "239 a 931"
-        }, 
-        "exame_id": 1, 
-        "id": 1, 
-        "pessoa": {
-          "email": "josilva@gmail.com", 
-          "id": 1, 
-          "nome": "Jo\u00e3o da Silva", 
-          "telefone": "47 99012 3232"
-        }, 
-        "pessoa_id": 1, 
-        "resultado": "219,0 pg/mL"
-      }
-    ]
+    
+
+    #curl localhost:5000/listar/Pessoa
+
+
+'''
+
+resultado da execução:
+
+aluno@D06-PC02:~$ curl localhost:5000/listar/Pessoa
+[
+  {
+    "cep": "89040-800",
+    "cidade": "Blumenau",
+    "complemento": null,
+    "email": "josilva@gmail.com",
+    "estado": "Santa Catarina",
+    "id": 1,
+    "nome": "Jo\u00e3o da Silva",
+    "numero": "1234",
+    "repetir_senha": null,
+    "rua": "Rua 1000",
+    "senha": null,
+    "telefone": "47 99012 3232"
+  }
+]
+
+
+
+
 '''

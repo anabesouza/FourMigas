@@ -2,7 +2,7 @@
 
 .dropbtn {
   background-color: #C9AAE2;
-  color: black;
+  color: white;
   padding: 16px;
   font-size: 16px;
   border: none;
@@ -11,7 +11,7 @@
 }
 
 .dropbtn a{
-	color: black;
+	color: white;
 	text-decoration: none;
 
 }
@@ -30,7 +30,7 @@
 }
 
 .dropdown-content a {
-  color: black;
+  color: white;
   padding: 12px 16px;
   text-decoration: none;
   display: block;
@@ -38,21 +38,10 @@
 
 
 #fundoMenu{
-	text-align: center;
-  width: 100x;
-  position: sticky;
-  top: -1px;
+	text-align: center
 }
 
-.dropbtn-cad {
-  background-color: #C9AAE2;
-  color: black;
-  padding: 16px;
-  font-size: 16px;
-  border: none;
-  margin: 0px;
-  
-}
+
 
 .dropdown-content a:hover {background-color: #E7D6F5;}
 
@@ -68,8 +57,6 @@
 #fundoRodape{
   background-color: #C9AAE2;
   text-align: center;
-  color: black;
-  text-decoration: none;
 }
 
 #colum1{
@@ -102,22 +89,22 @@ body {
   
 }
 
-table {
-  text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px;
-  border: 100;
-  width: 100%;
-  
+#minhaJanelaModal{
+  align-self: center;
 }
 
-#link {
-  text-decoration: none;
-  color: black;
-  font-size: 170%;
-  font-weight: bold;
+
+#teste {
+color: white;
+background: black;
+transition: transform 1s;
+transform: translateX(0) scale(0.5);
 }
 
-#produtos {
-  border: 6px solid #363636;
+#teste:hover,
+#teste:focus {
+background: purple;
+transform: translateX(1px) scale(2);
+
 }
+

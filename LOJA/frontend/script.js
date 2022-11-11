@@ -1,4 +1,120 @@
 $(function() { // quando o documento estiver pronto/carregado
+
+  function senhaValida(p){
+
+    var retorno = false;
+   
+    var letrasMaiusculas = /[A-Z]/;
+   
+    var letrasMinusculas = /[a-z]/; 
+   
+    var numeros = /[0-9]/;
+   
+    if(p.length > 8){
+   
+    return retorno;
+   
+    }
+   
+    if(p.length < 8){
+   
+    return retorno;
+   
+    }
+   
+    var auxMaiuscula = 0;
+   
+    var auxMinuscula = 0;
+   
+    var auxNumero = 0;
+   
+    for(var i=0; i<p.length; i++){
+   
+    if(letrasMaiusculas.test(p[i]))
+   
+    auxMaiuscula++;
+   
+    else if(letrasMinusculas.test(p[i]))
+   
+    auxMinuscula++;
+   
+    else if(numeros.test(p[i]))
+   
+    auxNumero++;
+   
+    }
+   
+    if (auxMaiuscula > 0){
+   
+    if (auxMinuscula > 0){
+   
+    if (auxNumero > 0){
+       {
+   
+    retorno = true;
+   
+    }}}}
+  
+    return retorno;
+  
+  }
+  
+  console.log(senhaValida("Test1234"));
+  
+  
+  var myInput = document.getElementById("Senha");
+  var letter = document.getElementById("letter");
+  var capital = document.getElementById("capital");
+  var length = document.getElementById("length");
+  
+  // When the user clicks on the password field, show the message box
+  myInput.onfocus = function() {
+    document.getElementById("message").style.display = "block";
+  }
+  
+  // When the user clicks outside of the password field, hide the message box
+  myInput.onblur = function() {
+    document.getElementById("message").style.display = "none";
+  }
+  
+  // When the user starts to type something inside the password field
+  //myInput.onkeyup = function() {
+    // Validate lowercase letters
+    var lowerCaseLetters = /[a-z]/g;
+    if(myInput.value.match(lowerCaseLetters)) {
+      letter.classList.remove("invalid");
+      letter.classList.add("valid");
+    } else {
+      letter.classList.remove("valid");
+      letter.classList.add("invalid");
+  }
+  
+    // Validate capital letters
+    var upperCaseLetters = /[A-Z]/g;
+    if(myInput.value.match(upperCaseLetters)) {
+      capital.classList.remove("invalid");
+      capital.classList.add("valid");
+    } else {
+      capital.classList.remove("valid");
+      capital.classList.add("invalid");
+    }
+  
+    // Validate length
+    if(myInput.value.length >= 8) {
+      length.classList.remove("invalid");
+      length.classList.add("valid");
+    } else {
+      length.classList.remove("valid");
+      length.classList.add("invalid");
+    }
+  
+    function validarSenha(input){
+      if(input.valueOf !== document.getElementById("campoSenha").value){
+          input.setCustomValidity('Senha não são iguais, favor repita!');
+      }else{
+          input.setCustomValidity('');
+      }
+  }
     
     // código para mapear click do botão incluir pessoa
     $(document).on("click", "#btIncluirPessoa", function() {
@@ -55,122 +171,3 @@ $(function() { // quando o documento estiver pronto/carregado
         }
     });
 });
-
-function senhaValida(p){
-
-  var retorno = false;
- 
-  var letrasMaiusculas = /[A-Z]/;
- 
-  var letrasMinusculas = /[a-z]/; 
- 
-  var numeros = /[0-9]/;
- 
-  if(p.length > 8){
- 
-  return retorno;
- 
-  }
- 
-  if(p.length < 8){
- 
-  return retorno;
- 
-  }
- 
-  var auxMaiuscula = 0;
- 
-  var auxMinuscula = 0;
- 
-  var auxNumero = 0;
- 
-  for(var i=0; i<p.length; i++){
- 
-  if(letrasMaiusculas.test(p[i]))
- 
-  auxMaiuscula++;
- 
-  else if(letrasMinusculas.test(p[i]))
- 
-  auxMinuscula++;
- 
-  else if(numeros.test(p[i]))
- 
-  auxNumero++;
- 
-  }
- 
-  if (auxMaiuscula > 0){
- 
-  if (auxMinuscula > 0){
- 
-  if (auxNumero > 0){
-     {
- 
-  retorno = true;
- 
-  }}}}
-
-  return retorno;
-
-}
-
-console.log(senhaValida("test1234"));
-
-
-
-/*var myInput = document.getElementById("Senha");
-var letter = document.getElementById("letter");
-var capital = document.getElementById("capital");
-var length = document.getElementById("length");
-
-// When the user clicks on the password field, show the message box
-myInput.onfocus = function() {
-  document.getElementById("message").style.display = "block";
-}
-
-// When the user clicks outside of the password field, hide the message box
-myInput.onblur = function() {
-  document.getElementById("message").style.display = "none";
-}
-
-// When the user starts to type something inside the password field
-//myInput.onkeyup = function() {
-  // Validate lowercase letters
-  var lowerCaseLetters = /[a-z]/g;
-  if(myInput.value.match(lowerCaseLetters)) {
-    letter.classList.remove("invalid");
-    letter.classList.add("valid");
-  } else {
-    letter.classList.remove("valid");
-    letter.classList.add("invalid");
-}
-
-  // Validate capital letters
-  var upperCaseLetters = /[A-Z]/g;
-  if(myInput.value.match(upperCaseLetters)) {
-    capital.classList.remove("invalid");
-    capital.classList.add("valid");
-  } else {
-    capital.classList.remove("valid");
-    capital.classList.add("invalid");
-  }
-
-  // Validate length
-  if(myInput.value.length >= 8) {
-    length.classList.remove("invalid");
-    length.classList.add("valid");
-  } else {
-    length.classList.remove("valid");
-    length.classList.add("invalid");
-  }
-
-  function validarSenha(input){
-    if(input.valueOf !== document.getElementById("campoSenha").value){
-        input.setCustomValidity('Senha não são iguais, favor repita!');
-    }else{
-        input.setCustomValidity('');
-    }
-}
-}
-*/

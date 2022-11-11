@@ -1,6 +1,5 @@
 from config import *
 from modelo import Pessoa
-from listar import *
 
 @app.route("/")
 def inicio():

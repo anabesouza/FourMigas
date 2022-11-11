@@ -1,5 +1,7 @@
 from config import *
+
 from modelo import *
+from modeloproduto import *
 
 if os.path.exists(arquivobd):
     os.remove(arquivobd)

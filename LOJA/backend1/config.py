@@ -10,14 +10,8 @@ app = Flask(__name__)
 CORS(app) # aplicar o cross domain
 # caminho do arquivo de banco de dados
 path = os.path.dirname(os.path.abspath(__file__)) 
-arquivobd = os.path.join(path, 'pessoas.db')
+arquivobd = os.path.join(path, 'sistemaprodutos.db')
 # sqlalchemy
 app.config['SQLALCHEMY_DATABASE_URI'] = "sqlite:///"+arquivobd
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False # remover warnings
 db = SQLAlchemy(app)
-
-#NÃO MUDAR!!!!
-app.app_context().push()    # <======================================================
-# https://stackoverflow.com/questions/34122949/working-outside-of-application-context-flask
-
-print("configuracao ok")
