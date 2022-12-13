@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+	<html lang = "pt-br">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1">
+			<title>Cadastre-se</title>
+			<link rel="stylesheet" type="text/css" href="estilo.css">
+			<!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	</head>
+		<body>
+
+			<div id="inicio">
+				<img src="inicio.png" alt="logoInsta" usemap="#insta">
+				<map name="insta">
+  					<area shape="rect" coords="34,44,270,350" alt="instagram" href="https://www.instagram.com/fourmigasloja/?hl=pt-br" target="_blank">
+				</map>
+			</div>
+
+			<div id="fundoMenu">
+			<br>
+			<nav>
+			  <div class="dropdown">
+			    <button class="dropbtn"><a href="home.html">HOME</a></button>
+			  </div>
+
+			  <div class="dropdown">
+				<button class="dropbtn" data-bs-toggle="modal" data-bs-target="#minhaJanelaModal">CADASTRO</button>
+				</div>
+
+
+			  <div class="dropdown">
+			    <button class="dropbtn">MIÇANGAS</button>
+			    <div class="dropdown-content">
+			      <a href="micangas(colares).html">COLARES</a>
+			      <a href="micangas(pulseiras).html">PULSEIRA</a>
+			    </div>
+			  </div>
+
+			  <div class="dropdown">
+			    <button class="dropbtn">BORDADOS</button>
+			    <div class="dropdown-content">
+			      <a href="bordados(pequenos).html">PEQUENOS</a>
+			      <a href="bordados(grandes).html">GRANDES</a>
+			    </div>
+			  </div>
+
+			  <div class="dropdown">
+			    <button class="dropbtn">ILUSTRAÇÕES</button>
+			    <div class="dropdown-content">
+			      <a href="ilustracoes(pequenas).html">PEQUENAS</a>
+			      <a href="ilustracoes(grandes).html">GRANDES</a>
+			    </div>
+			  </div>
+			<br>
+			<br>
+			</div>
+			</nav>
+			<br>
+			<div id="fundoBranco">
+				<br>
+				<!-- contúdo -->
+			
+            <h1>Inserir produto:</h1>
+                <form onsubmit="return false;">
+                    <!--onsubmit= return false;-->
+        
+                    <div class="mb-3">
+                        <label for="Produto" class="form-label">Produto: </label>
+                        <input type="text" class="form-control" id="campoProduto" aria-describedby="ajudaProduto"
+                            value="Colar de perólas" required="required">
+                        <div id="ajudaProduto" class="form-text">Informe o produto que será inserido.</div>
+                    </div>
+					<div class="mb-3">
+                        <label for="Imagem" class="form-label">Imagem do produto: </label>
+                        <input type="file"required="required">
+                        <div id="ajudaTamanho" class="form-text">Upload de imagem do produto.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Valor" class="form-label">Valor do produto: </label>
+                        <input type="text" class="form-control" id="campoValor" aria-describedby="ajudaValor"
+                            value="R$ 19,99" required="required">
+                        <div id="ajudaValor" class="form-text">Informe o valor do produto.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="Categoria" class="form-label">Categoria: </label>
+                            <select id="campoCategoria">
+                                <option value="Bordados" >Bordados</option>
+                                <option value="Ilustracoes" >Ilustrações</option>
+                                <option value="Micangas" >Miçangas</option>
+								</select>
+                        <div id="ajudaCategoria" class="form-text">Informe a categoria do produto que será inserido.</div>
+                    </div>
+					<div class="mb-3">
+                        <label for="Tamanho" class="form-label">Tamanho do produto: </label>
+                        <input type="text" class="form-control" id="campoTamanho" aria-describedby="ajudaTamanho"
+                            value="40cm/30cmX40cm" required="required">
+                        <div id="ajudaTamanho" class="form-text">Informe o tamanho do produto.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary" id="btIncluirProduto"
+                        style="background-color: black; border-color: #C9AAE2;">Cadastrar</button>
+                </form>
+			</div>	
+
+        <!-- Optional JavaScript; choose one of the two! -->
+
+        <!-- Option 1: Bootstrap Bundle with Popper -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+            crossorigin="anonymous"></script>
+
+        <!-- Option 2: Separate Popper and Bootstrap JS -->
+        <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+        <!-- https://releases.jquery.com/ -->
+
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+            integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+            crossorigin="anonymous"></script>
+
+        <script src="produtojs.js"></script>
+        <br>
+
+		</body>
+		
+		</html>
+		</div>
+	
+		</div> <!-- modal -->
+	<br>
+	<br>
+	</div>
+	<div id="fundoRodape">
+		<br><br><br>
+	</div>
+
+  </body>
+</html>
+
+	<!-- Optional JavaScript; choose one of the two! -->
+
+	<!-- Option 1: Bootstrap Bundle with Popper -->
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+		crossorigin="anonymous"></script>
+
+	<!-- Option 2: Separate Popper and Bootstrap JS -->
+	<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+
+	<!-- https://releases.jquery.com/ -->
+	<script src="https://code.jquery.com/jquery-3.6.0.js"
+		integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+	<script src="produtojs.js"></script>
+</body>
+
+</html>
